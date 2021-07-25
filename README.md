@@ -15,4 +15,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. ref <https://github.com/angular/flex-layout>
 2. run ```npm i -s @angular/flex-layout @angular/cdk```
-3. Restart server
+3. Add FlexLayoutModule to app.module
+4. Restart server
+
+### Task: Add prototype dashboard
+
+1. Add @angular/forms (app.module) for [(ngModel)] on templated form
+2 
