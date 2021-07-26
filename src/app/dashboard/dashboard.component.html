@@ -1,4 +1,29 @@
 <div class="container">
   <h4>Input form</h4>
-  
+  <div class="form">
+    <diV>
+      <mat-form-field appearance="standard">
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="firstName" name="firstName" />
+      </mat-form-field>
+    </diV>
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="lastName" name="lastName" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>Phone</mat-label>
+        <input matInput [(ngModel)]="phone" name="phone" />
+      </mat-form-field>
+    </div>
+  </div>
 </div>
