@@ -25,5 +25,9 @@
         <input matInput [(ngModel)]="phone" name="phone" />
       </mat-form-field>
     </div>
+    <button mat-raised-button color="accent" (click)="onAddUser()">Save</button>
+    <button mat-raised-button color="primary" (click)="onCancel()">
+      Cancel
+    </button>
   </div>
 </div>
