@@ -1,25 +1,24 @@
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  lastName: string;
+  firstName: string;
+  email: string;
+  phone: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {firstName: 'Fred', lastName: 'Evens', email: 'fred@server.com', phone: '846-444-8322'},
+  {firstName: 'Joan', lastName: 'Smith', email: 'jsmith@gmail.com', phone: '546-111-1452'},
+  {firstName: 'Mary', lastName: 'Blogs', email: 'mblogs@hotmail.com', phone: '577-294-1882'},
+  {firstName: 'Jack', lastName: 'Duffy', email: 'duffyj@gmail.com', phone: '113-435-6279'},
+  {firstName: 'Jill', lastName: 'McMuck', email: 'mcduck@box.org', phone: '100-354-9901'},
+  {firstName: 'Sue', lastName: 'Carbon', email: 'suec@outlook.com', phone: '134-378-4987'},
+  {firstName: 'David', lastName: 'Nitrogen', email: 'david@outlook.com', phone: '885-384-8800'},
+  {firstName: 'Wendy', lastName: 'Oxygen', email: 'oxy@outlook.com', phone: '981-882-0505'},
+  {firstName: 'Bill', lastName: 'Fluorine', email: 'bill@computer.org', phone: '868-129-5489'},
+  {firstName: 'Will', lastName: 'Neon', email: 'will@net.gov', phone: '208-556-7893'},
 ];
 
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -33,7 +32,7 @@ export class DashboardComponent implements OnInit {
   phone!: string;
 
   // table
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phone'];
   dataSource = ELEMENT_DATA;
 
   constructor() { }

@@ -5,25 +5,25 @@
       <diV>
         <mat-form-field appearance="standard">
           <mat-label>First Name</mat-label>
-          <input matInput [(ngModel)]="firstName" name="firstName" />
+          <input matInput [(ngModel)]="firstName" lastName="firstName" />
         </mat-form-field>
       </diV>
       <div>
         <mat-form-field appearance="standard">
           <mat-label>Last Name</mat-label>
-          <input matInput [(ngModel)]="lastName" name="lastName" />
+          <input matInput [(ngModel)]="lastName" lastName="lastName" />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="standard">
           <mat-label>Email</mat-label>
-          <input matInput [(ngModel)]="email" name="email" />
+          <input matInput [(ngModel)]="email" lastName="email" />
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="standard">
           <mat-label>Phone</mat-label>
-          <input matInput [(ngModel)]="phone" name="phone" />
+          <input matInput [(ngModel)]="phone" lastName="phone" />
         </mat-form-field>
       </div>
       <div class="row" fxLayoutGap="8px">
@@ -54,28 +54,28 @@
       <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef>No.</th>
-        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+      <!-- firstName Column -->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef>Fist Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
       </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <!-- lastName Column -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef>Last Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
       </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef>Weight</th>
-        <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      <!-- email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef>Symbol</th>
-        <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>Phone</th>
+        <td mat-cell *matCellDef="let element">{{ element.phone }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
