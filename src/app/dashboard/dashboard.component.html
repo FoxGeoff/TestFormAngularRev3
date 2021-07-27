@@ -1,3 +1,4 @@
+<div class="desktop" fxLayout="row" fxLayoutGap="18px">
 <div class="container">
   <h4>Input form</h4>
   <div class="form">
@@ -25,9 +26,39 @@
         <input matInput [(ngModel)]="phone" name="phone" />
       </mat-form-field>
     </div>
-    <button mat-raised-button color="accent" (click)="onAddUser()">Save</button>
-    <button mat-raised-button color="primary" (click)="onCancel()">
-      Cancel
-    </button>
-  </div>
+    <div class="row" fxLayoutGap="8px">
+      <button mat-raised-button color="accent" (click)="onAddUser()">
+        Save
+      </button>
+      <button mat-raised-button color="primary" (click)="onCancel()">
+        Cancel
+      </button>
+    </div>
+  </div> <!-- end of form  -->
+
+  <mat-list>
+    <div mat-subheader>User list</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon>people</mat-icon>
+      <div mat-line style="color: 'blue'"></div>
+      <div mat-line>Geoff Fox</div>
+      <div mat-line>Geoff@gmail.com</div>
+      <div mat-line>839-384-7854</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+<div class="container-table">
+  <mat-list>
+    <div mat-subheader>User list</div>
+    <mat-list-item>
+      <mat-icon mat-list-icon>people</mat-icon>
+      <div mat-line style="color: 'blue'"></div>
+      <div mat-line>Geoff Fox</div>
+      <div mat-line>Geoff@gmail.com</div>
+      <div mat-line>839-384-7854</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
 </div>

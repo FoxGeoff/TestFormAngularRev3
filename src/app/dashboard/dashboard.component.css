@@ -1,6 +1,22 @@
 .container {
   margin: 18px;
   width: 100%;
+  max-width: 250px;
+  min-width: 200px;
+  border: 1px;
+  border-style: solid;
+  padding: 18px;
+  border-radius: 5px;
  }
 
- 
+ .container-table {
+  margin: 18px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 400px;
+  border: 1px;
+  border-style: solid;
+  padding: 18px;
+  border-radius: 5px;
+ }
+
