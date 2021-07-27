@@ -1,64 +1,85 @@
 <div class="desktop" fxLayout="row" fxLayoutGap="18px">
-<div class="container">
-  <h4>Input form</h4>
-  <div class="form">
-    <diV>
-      <mat-form-field appearance="standard">
-        <mat-label>First Name</mat-label>
-        <input matInput [(ngModel)]="firstName" name="firstName" />
-      </mat-form-field>
-    </diV>
-    <div>
-      <mat-form-field appearance="standard">
-        <mat-label>Last Name</mat-label>
-        <input matInput [(ngModel)]="lastName" name="lastName" />
-      </mat-form-field>
+  <div class="container">
+    <h4>Input form</h4>
+    <div class="form">
+      <diV>
+        <mat-form-field appearance="standard">
+          <mat-label>First Name</mat-label>
+          <input matInput [(ngModel)]="firstName" name="firstName" />
+        </mat-form-field>
+      </diV>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Last Name</mat-label>
+          <input matInput [(ngModel)]="lastName" name="lastName" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="email" name="email" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="standard">
+          <mat-label>Phone</mat-label>
+          <input matInput [(ngModel)]="phone" name="phone" />
+        </mat-form-field>
+      </div>
+      <div class="row" fxLayoutGap="8px">
+        <button mat-raised-button color="accent" (click)="onAddUser()">
+          Save
+        </button>
+        <button mat-raised-button color="primary" (click)="onCancel()">
+          Cancel
+        </button>
+      </div>
     </div>
-    <div>
-      <mat-form-field appearance="standard">
-        <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="email" name="email" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="standard">
-        <mat-label>Phone</mat-label>
-        <input matInput [(ngModel)]="phone" name="phone" />
-      </mat-form-field>
-    </div>
-    <div class="row" fxLayoutGap="8px">
-      <button mat-raised-button color="accent" (click)="onAddUser()">
-        Save
-      </button>
-      <button mat-raised-button color="primary" (click)="onCancel()">
-        Cancel
-      </button>
-    </div>
-  </div> <!-- end of form  -->
+    <!-- end of form  -->
 
-  <mat-list>
-    <div mat-subheader>User list</div>
-    <mat-list-item>
-      <mat-icon mat-list-icon>people</mat-icon>
-      <div mat-line style="color: 'blue'"></div>
-      <div mat-line>Geoff Fox</div>
-      <div mat-line>Geoff@gmail.com</div>
-      <div mat-line>839-384-7854</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-  </mat-list>
-</div>
-<div class="container-table">
-  <mat-list>
-    <div mat-subheader>User list</div>
-    <mat-list-item>
-      <mat-icon mat-list-icon>people</mat-icon>
-      <div mat-line style="color: 'blue'"></div>
-      <div mat-line>Geoff Fox</div>
-      <div mat-line>Geoff@gmail.com</div>
-      <div mat-line>839-384-7854</div>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-  </mat-list>
-</div>
+    <mat-list>
+      <div mat-subheader>User list</div>
+      <mat-list-item>
+        <mat-icon mat-list-icon>people</mat-icon>
+        <div mat-line style="color: 'blue'"></div>
+        <div mat-line>Geoff Fox</div>
+        <div mat-line>Geoff@gmail.com</div>
+        <div mat-line>839-384-7854</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+  <div class="container-table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef>Weight</th>
+        <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef>Symbol</th>
+        <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
 </div>
