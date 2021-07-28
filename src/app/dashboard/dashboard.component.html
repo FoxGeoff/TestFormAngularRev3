@@ -39,12 +39,12 @@
 
     <mat-list>
       <div mat-subheader>User list</div>
-      <mat-list-item>
+      <mat-list-item *ngFor="let user of dataSource">
         <mat-icon mat-list-icon>people</mat-icon>
         <div mat-line style="color: 'blue'"></div>
-        <div mat-line>Geoff Fox</div>
-        <div mat-line>Geoff@gmail.com</div>
-        <div mat-line>839-384-7854</div>
+        <div mat-line>{{user.firstName}} {{user.lastName}}</div>
+        <div mat-line>{{user.email}}</div>
+        <div mat-line>1+{{user.phone}}</div>
       </mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>

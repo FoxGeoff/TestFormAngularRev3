@@ -21,3 +21,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Task: Add prototype dashboard
 
 1. Add @angular/forms (app.module) for [(ngModel)] on templated form
+2. Add code to buttons events to generate user list
