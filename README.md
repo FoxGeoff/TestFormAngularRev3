@@ -23,3 +23,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. Add @angular/forms (app.module) for [(ngModel)] on templated form
 2. Add code to buttons events to generate user list
 3. Add reference to table for update of the table (add user)
+4. Display using floating fxLayout elements

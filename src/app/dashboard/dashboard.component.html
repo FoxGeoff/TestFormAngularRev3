@@ -1,6 +1,6 @@
-<div class="desktop" fxLayout="row" fxLayoutGap="18px">
-  <div class="container">
-    <h4>Input form</h4>
+<div class="desktop" fxLayout="row wrap" fxLayoutGap="18px">
+  <div class="grid-item">
+    <h4>New User Form</h4>
     <div class="form mat-elevation-z8">
       <diV>
         <mat-form-field appearance="standard">
@@ -35,21 +35,25 @@
         </button>
       </div>
     </div>
-    <!-- end of form  -->
-
+  </div>
+  <!-- end of form  -->
+  <div class="grid-item">
+    <h4>User List</h4>
     <mat-list>
-      <div mat-subheader>User list</div>
+      <div mat-subheader>Users</div>
       <mat-list-item *ngFor="let user of dataSource">
         <mat-icon mat-list-icon>people</mat-icon>
         <div mat-line style="color: 'blue'"></div>
-        <div mat-line>{{user.firstName}} {{user.lastName}}</div>
-        <div mat-line>{{user.email}}</div>
-        <div mat-line>1+{{user.phone}}</div>
+        <div mat-line>{{ user.firstName }} {{ user.lastName }}</div>
+        <div mat-line>{{ user.email }}</div>
+        <div mat-line>1+{{ user.phone }}</div>
       </mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>
   </div>
-  <div class="container-table">
+
+  <div class="grid-item">
+    <h4>User Table</h4>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
