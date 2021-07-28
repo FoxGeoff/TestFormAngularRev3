@@ -1,11 +1,11 @@
-export interface PeriodicElement {
+export interface User {
   lastName: string;
   firstName: string;
   email: string;
   phone: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const USER_DATA: User[] = [
   {firstName: 'Fred', lastName: 'Evens', email: 'fred@server.com', phone: '846-444-8322'},
   {firstName: 'Joan', lastName: 'Smith', email: 'jsmith@gmail.com', phone: '546-111-1452'},
   {firstName: 'Mary', lastName: 'Blogs', email: 'mblogs@hotmail.com', phone: '577-294-1882'},
@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
 
   // table
   displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phone'];
-  dataSource = ELEMENT_DATA;
+  dataSource = USER_DATA;
 
   constructor() { }
 
