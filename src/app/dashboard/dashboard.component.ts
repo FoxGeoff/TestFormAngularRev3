@@ -18,7 +18,8 @@ const USER_DATA: User[] = [
   { firstName: 'Will', lastName: 'Neon', email: 'will@net.gov', phone: '208-556-7893' },
 ];
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTable } from '@angular/material/table';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -35,7 +36,7 @@ export class DashboardComponent implements OnInit {
   // table
   displayedColumns: string[] = ['firstName', 'lastName', 'email', 'phone'];
   dataSource = USER_DATA;
-
+  @ViewChild(MatTable, { static: true }) table!: MatTable<any>
   constructor() { }
 
   ngOnInit(): void {
@@ -51,6 +52,7 @@ export class DashboardComponent implements OnInit {
     });
     //debug
     console.log(USER_DATA);
+    this.table.renderRows();
   }
 
   onCancel() {
